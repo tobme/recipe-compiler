@@ -27,22 +27,37 @@
     <ClCompile Include="Scanner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Token.cpp">
+    <ClCompile Include="parser.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Bool.cpp">
+    <ClCompile Include="Tokens\String.cpp">
       <Filter>Source Files\Tokens</Filter>
     </ClCompile>
-    <ClCompile Include="Char.cpp">
+    <ClCompile Include="Tokens\Int.cpp">
       <Filter>Source Files\Tokens</Filter>
     </ClCompile>
-    <ClCompile Include="Int.cpp">
+    <ClCompile Include="Tokens\Char.cpp">
       <Filter>Source Files\Tokens</Filter>
     </ClCompile>
-    <ClCompile Include="String.cpp">
+    <ClCompile Include="Tokens\Bool.cpp">
       <Filter>Source Files\Tokens</Filter>
     </ClCompile>
-    <ClCompile Include="Names.cpp">
+    <ClCompile Include="Tokens\Names.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tokens\Token.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramTree\Declaration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramTree\Node.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramTree\Program.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgramTree\Type.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,22 +65,37 @@
     <ClInclude Include="Scanner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Token.h">
+    <ClInclude Include="parser.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="String.h">
+    <ClInclude Include="Tokens\Bool.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Int.h">
+    <ClInclude Include="Tokens\Char.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Char.h">
+    <ClInclude Include="Tokens\Int.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Bool.h">
+    <ClInclude Include="Tokens\String.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Names.h">
+    <ClInclude Include="Tokens\Names.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tokens\Token.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramTree\Program.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramTree\Node.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramTree\Type.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgramTree\Declaration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

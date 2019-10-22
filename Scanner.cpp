@@ -1,11 +1,12 @@
 #include "Scanner.h"
 #include<fstream>
 #include<iostream>
-#include "Int.h"
-#include "Char.h"
-#include "String.h"
-#include "Bool.h"
-#include "Names.h"
+#include "Tokens/Int.h"
+#include "Tokens/Char.h"
+#include "Tokens/String.h"
+#include "Tokens/Bool.h"
+#include "Tokens/Names.h"
+
 
 
 Scanner::Scanner() : linesNumber{0}
@@ -17,9 +18,9 @@ Scanner::~Scanner()
 {
 }
 
-std::list<Token> Scanner::read(std::string filename)
+std::vector<Token> Scanner::read(std::string filename)
 {
-	std::list<Token> tokens;
+	std::vector<Token> tokens;
 
 	std::ifstream readStream{ filename };
 	std::string text;
@@ -66,5 +67,5 @@ std::list<Token> Scanner::read(std::string filename)
 
 
 
-	return std::list<Token>();
+	return tokens;
 }

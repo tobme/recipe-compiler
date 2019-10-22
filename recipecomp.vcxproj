@@ -123,23 +123,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Bool.cpp" />
-    <ClCompile Include="Char.cpp" />
-    <ClCompile Include="Int.cpp" />
-    <ClCompile Include="Names.cpp" />
+    <ClCompile Include="Tokens\Bool.cpp" />
+    <ClCompile Include="Tokens\Char.cpp" />
+    <ClCompile Include="ProgramTree\Declaration.cpp" />
+    <ClCompile Include="Tokens\Int.cpp" />
+    <ClCompile Include="Tokens\Names.cpp" />
+    <ClCompile Include="ProgramTree\Node.cpp" />
+    <ClCompile Include="parser.cpp" />
+    <ClCompile Include="ProgramTree\Program.cpp" />
     <ClCompile Include="recipe.cpp" />
     <ClCompile Include="Scanner.cpp" />
-    <ClCompile Include="String.cpp" />
-    <ClCompile Include="Token.cpp" />
+    <ClCompile Include="Tokens\String.cpp" />
+    <ClCompile Include="Tokens\Token.cpp" />
+    <ClCompile Include="ProgramTree\Type.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bool.h" />
-    <ClInclude Include="Char.h" />
-    <ClInclude Include="Int.h" />
-    <ClInclude Include="Names.h" />
+    <ClInclude Include="Tokens\Bool.h" />
+    <ClInclude Include="Tokens\Char.h" />
+    <ClInclude Include="ProgramTree\Declaration.h" />
+    <ClInclude Include="Tokens\Int.h" />
+    <ClInclude Include="Tokens\Names.h" />
+    <ClInclude Include="ProgramTree\Node.h" />
+    <ClInclude Include="parser.h" />
+    <ClInclude Include="ProgramTree\Program.h" />
     <ClInclude Include="Scanner.h" />
-    <ClInclude Include="String.h" />
-    <ClInclude Include="Token.h" />
+    <ClInclude Include="Tokens\String.h" />
+    <ClInclude Include="Tokens\Token.h" />
+    <ClInclude Include="ProgramTree\Type.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="scannerReadTest.recipe" />
