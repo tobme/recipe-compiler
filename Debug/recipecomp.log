@@ -1,0 +1,10 @@
+﻿  Bool.cpp
+  Char.cpp
+  Int.cpp
+  Names.cpp
+  recipe.cpp
+  Scanner.cpp
+  String.cpp
+  Token.cpp
+  Generating Code...
+  recipecomp.vcxproj -> C:\Users\Tobbe\source\repos\recipecomp\Debug\recipecomp.exe

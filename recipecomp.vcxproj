@@ -123,6 +123,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bool.cpp" />
+    <ClCompile Include="Char.cpp" />
+    <ClCompile Include="Int.cpp" />
+    <ClCompile Include="Names.cpp" />
+    <ClCompile Include="recipe.cpp" />
+    <ClCompile Include="Scanner.cpp" />
+    <ClCompile Include="String.cpp" />
+    <ClCompile Include="Token.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bool.h" />
+    <ClInclude Include="Char.h" />
+    <ClInclude Include="Int.h" />
+    <ClInclude Include="Names.h" />
+    <ClInclude Include="Scanner.h" />
+    <ClInclude Include="String.h" />
+    <ClInclude Include="Token.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="scannerReadTest.recipe" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
