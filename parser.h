@@ -8,12 +8,13 @@
 class parser
 {
 public:
-	parser(std::vector<Token> & t);
+	parser(std::vector<Token*> & t);
 	~parser();
-private:
-	std::vector<Token> token;
-	Declaration* buildDeclaration();
 	Program* buildProgram();
+private:
+	std::vector<Token*> token;
+	Declaration* buildDeclaration();
+
 	Type* buildType();
 };
 

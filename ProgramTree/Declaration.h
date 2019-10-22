@@ -6,10 +6,10 @@ class Declaration :
 	public Node
 {
 public:
-	Declaration(std::string n, Type t);
+	Declaration(std::string n, Type* t);
 	~Declaration();
 private:
 	std::string name;
-	Type type;
+	Type* type;
 };
 

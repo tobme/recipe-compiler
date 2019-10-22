@@ -131,7 +131,7 @@
     <ClCompile Include="ProgramTree\Node.cpp" />
     <ClCompile Include="parser.cpp" />
     <ClCompile Include="ProgramTree\Program.cpp" />
-    <ClCompile Include="recipe.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Scanner.cpp" />
     <ClCompile Include="Tokens\String.cpp" />
     <ClCompile Include="Tokens\Token.cpp" />

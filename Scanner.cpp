@@ -18,9 +18,9 @@ Scanner::~Scanner()
 {
 }
 
-std::vector<Token> Scanner::read(std::string filename)
+std::vector<Token*> Scanner::read(std::string filename)
 {
-	std::vector<Token> tokens;
+	std::vector<Token*> tokens;
 
 	std::ifstream readStream{ filename };
 	std::string text;
@@ -40,23 +40,23 @@ std::vector<Token> Scanner::read(std::string filename)
 
 		if (text == "1dl")
 		{
-			tokens.push_back(Int(linesNumber));
+			tokens.push_back(new Int(linesNumber));
 		}
 		else if (text == "2dl")
 		{
-			tokens.push_back(Char(linesNumber));
+			tokens.push_back(new Char(linesNumber));
 		}
 		else if (text == "3dl")
 		{
-			tokens.push_back(String(linesNumber));
+			tokens.push_back(new String(linesNumber));
 		}
 		else if (text == "4dl")
 		{
-			tokens.push_back(Bool(linesNumber));
+			tokens.push_back(new Bool(linesNumber));
 		}
 		else
 		{
-			tokens.push_back(Names(text, linesNumber));
+			tokens.push_back(new Names(text, linesNumber));
 		}
 
 		if (readStream.peek() == '\n')

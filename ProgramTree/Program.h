@@ -6,9 +6,9 @@ class Program :
 	public Node
 {
 public:
-	Program(std::list<Declaration> & decl);
+	Program(std::list<Declaration*> & decl);
 	~Program();
 private:
-	std::list<Declaration> decls;
+	std::list<Declaration*> & decls;
 };
 
