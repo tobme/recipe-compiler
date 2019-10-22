@@ -16,6 +16,7 @@ parser::parser(std::vector<Token*> & t) : token{t}
 
 parser::~parser()
 {
+
 }
 
 Program* parser::buildProgram()

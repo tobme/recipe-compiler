@@ -9,18 +9,21 @@
 
 
 
-Scanner::Scanner() : linesNumber{0}
+Scanner::Scanner() : linesNumber{ 0 }, tokens{}
 {
 }
 
 
 Scanner::~Scanner()
 {
+	for (Token* t : tokens)
+	{
+		free(t);
+	}
 }
 
-std::vector<Token*> Scanner::read(std::string filename)
+std::vector<Token*>& Scanner::read(std::string filename)
 {
-	std::vector<Token*> tokens;
 
 	std::ifstream readStream{ filename };
 	std::string text;

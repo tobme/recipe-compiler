@@ -11,8 +11,9 @@ public:
 	Scanner();
 	~Scanner();
 
-	std::vector<Token*> read(std::string filename);
+	std::vector<Token*>& read(std::string filename);
 private:
 	int linesNumber;
+	std::vector<Token*> tokens;
 };
 
