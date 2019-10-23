@@ -123,6 +123,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Tokens\EndCode.cpp" />
+    <ClCompile Include="Tokens\StartCode.cpp" />
     <ClCompile Include="Tokens\Bool.cpp" />
     <ClCompile Include="Tokens\Char.cpp" />
     <ClCompile Include="ProgramTree\Declaration.cpp" />
@@ -138,6 +140,8 @@
     <ClCompile Include="ProgramTree\Type.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Tokens\EndCode.h" />
+    <ClInclude Include="Tokens\StartCode.h" />
     <ClInclude Include="Tokens\Bool.h" />
     <ClInclude Include="Tokens\Char.h" />
     <ClInclude Include="ProgramTree\Declaration.h" />

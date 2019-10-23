@@ -6,10 +6,12 @@
 #include "Tokens/String.h"
 #include "Tokens/Bool.h"
 #include "Tokens/Names.h"
+#include "Tokens/EndCode.h"
+#include "Tokens/StartCode.h"
 
 
 
-Scanner::Scanner() : linesNumber{ 0 }, tokens{}
+Scanner::Scanner() : linesNumber{ 2 }, tokens{}
 {
 }
 
@@ -26,7 +28,8 @@ std::vector<Token*>& Scanner::read(std::string filename)
 {
 
 	std::ifstream readStream{ filename };
-	std::string text;
+	std::string text = "";
+	char c = {};
 
 	if (!readStream.is_open())
 	{
@@ -34,12 +37,16 @@ std::vector<Token*>& Scanner::read(std::string filename)
 		return tokens;
 	}
 
-	readStream >> text;
+	getline(readStream, text); // Title
+	text = "";
 
-	while (readStream >> text)
+	while (readStream.get(c))
 	{
-		std::cout << "Print text: " << text << std::endl;
-		std::cout << "line Number: " << linesNumber << std::endl;
+		//c = readStream.get();
+		if (c != ' ' && c!= '\n')
+			text += c;
+
+
 
 		if (text == "1dl")
 		{
@@ -57,18 +64,33 @@ std::vector<Token*>& Scanner::read(std::string filename)
 		{
 			tokens.push_back(new Bool(linesNumber));
 		}
-		else
+		else if (text == "Enjoy")
+		{
+			tokens.push_back(new EndCode(linesNumber));
+		}
+		else if (text == "Begin")
+		{
+			tokens.push_back(new StartCode(linesNumber));
+		}
+		else if ((readStream.peek() == '\n' || readStream.peek() == ' ') && text != "")
 		{
 			tokens.push_back(new Names(text, linesNumber));
 		}
 
-		if (readStream.peek() == '\n')
+		if (readStream.peek() == ' ' || readStream.peek() == '\n')
+		{
+			std::cout << "Print text: " << text << std::endl;
+			std::cout << "line Number: " << linesNumber << std::endl;
+			text = "";
+		}
+
+		if (c == '\n' || c == '\r')
 		{
 			linesNumber++;
 		}
 	}
 
-
+	readStream.close();
 
 	return tokens;
 }

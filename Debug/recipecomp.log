@@ -1,7 +1,5 @@
-﻿  Main.cpp
-  Declaration.cpp
-  Type.cpp
-  Scanner.cpp
+﻿  StartCode.cpp
   parser.cpp
+  Scanner.cpp
   Generating Code...
   recipecomp.vcxproj -> C:\Users\Tobbe\source\repos\recipecomp\Debug\recipecomp.exe
