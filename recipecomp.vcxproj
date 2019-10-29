@@ -123,6 +123,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ProgramTree\Functions.cpp" />
+    <ClCompile Include="ProgramTree\myOperator.cpp" />
+    <ClCompile Include="ProgramTree\Assignment.cpp" />
+    <ClCompile Include="ProgramTree\Statements.cpp" />
+    <ClCompile Include="Tokens\Operator.cpp" />
+    <ClCompile Include="ProgramTree\ParsExpression.cpp" />
+    <ClCompile Include="ProgramTree\ParsNumeral.cpp" />
+    <ClCompile Include="Tokens\Expression.cpp" />
+    <ClCompile Include="Tokens\Numeral.cpp" />
+    <ClCompile Include="ProgramTree\AddAssignments.cpp" />
+    <ClCompile Include="Tokens\Add.cpp" />
     <ClCompile Include="Tokens\EndCode.cpp" />
     <ClCompile Include="Tokens\StartCode.cpp" />
     <ClCompile Include="Tokens\Bool.cpp" />
@@ -138,8 +149,21 @@
     <ClCompile Include="Tokens\String.cpp" />
     <ClCompile Include="Tokens\Token.cpp" />
     <ClCompile Include="ProgramTree\Type.cpp" />
+    <ClCompile Include="ProgramTree\Variable.cpp" />
+    <ClCompile Include="Tokens\TokFunctions.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ProgramTree\Functions.h" />
+    <ClInclude Include="ProgramTree\myOperator.h" />
+    <ClInclude Include="ProgramTree\Assignment.h" />
+    <ClInclude Include="ProgramTree\Statements.h" />
+    <ClInclude Include="Token\Operator.h" />
+    <ClInclude Include="ProgramTree\ParsExpression.h" />
+    <ClInclude Include="ProgramTree\ParsNumeral.h" />
+    <ClInclude Include="Tokens\Expression.h" />
+    <ClInclude Include="Tokens\Numeral.h" />
+    <ClInclude Include="ProgramTree\AddAssignments.h" />
+    <ClInclude Include="Tokens\Add.h" />
     <ClInclude Include="Tokens\EndCode.h" />
     <ClInclude Include="Tokens\StartCode.h" />
     <ClInclude Include="Tokens\Bool.h" />
@@ -154,6 +178,8 @@
     <ClInclude Include="Tokens\String.h" />
     <ClInclude Include="Tokens\Token.h" />
     <ClInclude Include="ProgramTree\Type.h" />
+    <ClInclude Include="ProgramTree\Variable.h" />
+    <ClInclude Include="Tokens\TokFunctions.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="scannerReadTest.recipe" />

@@ -1,0 +1,18 @@
+#pragma once
+#include "Statements.h"
+#include "myOperator.h"
+#include "ParsExpression.h"
+#include "Variable.h"
+
+class Assignment :
+	public Statements
+{
+public:
+	Assignment(MyOperator* o, ParsExpression* e, Variable* v);
+	virtual ~Assignment();
+private:
+	MyOperator* op;
+	ParsExpression* exp;
+	Variable* reciever;
+};
+

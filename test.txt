@@ -1,0 +1,6 @@
+.dseg
+	Grädde:	.byte 8
+	Ost:	.byte 8
+	Mjölk:	.byte 8
+.cseg
+Start:

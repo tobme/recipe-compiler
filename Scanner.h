@@ -13,6 +13,8 @@ public:
 
 	std::vector<Token*>& read(std::string filename);
 private:
+	bool is_number(std::string const& s);
+
 	int linesNumber;
 	std::vector<Token*> tokens;
 };

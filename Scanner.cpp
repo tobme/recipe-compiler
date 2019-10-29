@@ -8,6 +8,9 @@
 #include "Tokens/Names.h"
 #include "Tokens/EndCode.h"
 #include "Tokens/StartCode.h"
+#include "Tokens/Add.h"
+#include "Tokens/Numeral.h"
+#include "Tokens/TokFunctions.h"
 
 
 
@@ -47,41 +50,52 @@ std::vector<Token*>& Scanner::read(std::string filename)
 			text += c;
 
 
+		if ((readStream.peek() == '\n' || readStream.peek() == ' ') && text != "")
+		{
+			if (text == "1dl")
+			{
+				tokens.push_back(new Int(linesNumber));
+			}
+			else if (text == "2dl")
+			{
+				tokens.push_back(new Char(linesNumber));
+			}
+			else if (text == "3dl")
+			{
+				tokens.push_back(new String(linesNumber));
+			}
+			else if (text == "4dl")
+			{
+				tokens.push_back(new Bool(linesNumber));
+			}
+			else if (text == "Enjoy")
+			{
+				tokens.push_back(new EndCode(linesNumber));
+			}
+			else if (text == "Add")
+			{
+				tokens.push_back(new Add(linesNumber));
+			}
+			else if (is_number(text))
+			{
+				tokens.push_back(new Numeral(linesNumber, std::stoi(text)));
+			}
+			else if (text.back() == ':')
+			{
+				text.pop_back();
+				tokens.push_back(new TokFunctions(linesNumber, text));
+			}
+			else
+			{
+				tokens.push_back(new Names(text, linesNumber));
+			}
 
-		if (text == "1dl")
-		{
-			tokens.push_back(new Int(linesNumber));
-		}
-		else if (text == "2dl")
-		{
-			tokens.push_back(new Char(linesNumber));
-		}
-		else if (text == "3dl")
-		{
-			tokens.push_back(new String(linesNumber));
-		}
-		else if (text == "4dl")
-		{
-			tokens.push_back(new Bool(linesNumber));
-		}
-		else if (text == "Enjoy")
-		{
-			tokens.push_back(new EndCode(linesNumber));
-		}
-		else if (text == "Begin")
-		{
-			tokens.push_back(new StartCode(linesNumber));
-		}
-		else if ((readStream.peek() == '\n' || readStream.peek() == ' ') && text != "")
-		{
-			tokens.push_back(new Names(text, linesNumber));
-		}
-
-		if (readStream.peek() == ' ' || readStream.peek() == '\n')
-		{
-			std::cout << "Print text: " << text << std::endl;
-			std::cout << "line Number: " << linesNumber << std::endl;
-			text = "";
+			if (readStream.peek() == ' ' || readStream.peek() == '\n')
+			{
+				std::cout << "Print text: " << text << std::endl;
+				std::cout << "line Number: " << linesNumber << std::endl;
+				text = "";
+			}
 		}
 
 		if (c == '\n' || c == '\r')
@@ -93,4 +107,9 @@ std::vector<Token*>& Scanner::read(std::string filename)
 	readStream.close();
 
 	return tokens;
+}
+
+bool Scanner::is_number(std::string const& s)
+{
+	return !s.empty() && std::all_of(s.begin(), s.end(), ::isdigit);
 }

@@ -7,6 +7,7 @@ class Type :
 public:
 	Type(std::string t);
 	~Type();
+	unsigned getSize();
 private:
 	std::string type;
 };
