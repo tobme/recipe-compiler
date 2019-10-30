@@ -6,5 +6,6 @@ class Statements :
 public:
 	Statements();
 	virtual ~Statements();
+	virtual std::ostream& codegen(std::ostream& os) = 0;
 };
 

@@ -11,6 +11,8 @@
 #include "Tokens/Expression.h"
 #include "Tokens/Numeral.h"
 #include "Tokens/TokFunctions.h"
+#include "Tokens/TokPrint.h"
+#include "Tokens/TokEndNote.h"
 #include "ProgramTree/ParsExpression.h"
 #include "ProgramTree/ParsNumeral.h"
 #include "ProgramTree/Variable.h"
@@ -118,9 +120,37 @@ Statements* parser::buildStatements()
 {
 	if (dynamic_cast<Operator*>(token.front()))
 		return buildAssignment();
+	else if (dynamic_cast<TokPrint*>(token.front()))
+		return buildPrint();
 
 	return nullptr;
 
+}
+
+Print* parser::buildPrint()
+{
+	token.erase(token.begin()); // Erase Print keyword
+
+	ParsExpression* var = nullptr;
+
+	if (dynamic_cast<Names*>(token.front()))
+	{
+		var = buildExpression();
+	}
+	else
+	{
+		std::string temp = "Compile error at line: " + std::to_string(token.front()->getLine()) + " : Expected a variable name";
+		throw std::exception(temp.c_str());
+	}
+
+	while (!dynamic_cast<TokEndNote*>(token.front())) // Looking for end note
+	{
+		token.erase(token.begin());
+	}
+
+	token.erase(token.begin());
+
+	return new Print{ dynamic_cast<Variable*>(var) };
 }
 
 

@@ -6,6 +6,7 @@
 #include "ProgramTree/Assignment.h"
 #include "ProgramTree/myOperator.h"
 #include "ProgramTree/Functions.h"
+#include "ProgramTree/Print.h"
 #include<vector>
 
 class parser
@@ -25,5 +26,6 @@ private:
 	Functions* buildFunctions();
 	Type* buildType();
 	Statements* buildStatements();
+	Print* buildPrint();
 };
 

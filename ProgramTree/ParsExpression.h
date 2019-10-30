@@ -7,6 +7,8 @@ class ParsExpression :
 {
 public:
 	ParsExpression();
-	~ParsExpression();
+	virtual ~ParsExpression();
+	virtual std::ostream& codegen(std::ostream& os) = 0;
+	virtual std::string getName() = 0;
 };
 

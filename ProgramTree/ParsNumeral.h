@@ -6,6 +6,8 @@ class ParsNumeral :
 public:
 	ParsNumeral(int v);
 	~ParsNumeral();
+	std::ostream& codegen(std::ostream& os) override;
+	std::string getName() override;
 private:
 	int value;
 };

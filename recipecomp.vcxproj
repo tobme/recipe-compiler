@@ -123,10 +123,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ProgramTree\Print.cpp" />
     <ClCompile Include="ProgramTree\Functions.cpp" />
     <ClCompile Include="ProgramTree\myOperator.cpp" />
     <ClCompile Include="ProgramTree\Assignment.cpp" />
     <ClCompile Include="ProgramTree\Statements.cpp" />
+    <ClCompile Include="Tokens\TokEndNote.cpp" />
     <ClCompile Include="Tokens\Operator.cpp" />
     <ClCompile Include="ProgramTree\ParsExpression.cpp" />
     <ClCompile Include="ProgramTree\ParsNumeral.cpp" />
@@ -151,12 +153,15 @@
     <ClCompile Include="ProgramTree\Type.cpp" />
     <ClCompile Include="ProgramTree\Variable.cpp" />
     <ClCompile Include="Tokens\TokFunctions.cpp" />
+    <ClCompile Include="Tokens\TokPrint.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ProgramTree\Print.h" />
     <ClInclude Include="ProgramTree\Functions.h" />
     <ClInclude Include="ProgramTree\myOperator.h" />
     <ClInclude Include="ProgramTree\Assignment.h" />
     <ClInclude Include="ProgramTree\Statements.h" />
+    <ClInclude Include="Tokens\TokEndNote.h" />
     <ClInclude Include="Token\Operator.h" />
     <ClInclude Include="ProgramTree\ParsExpression.h" />
     <ClInclude Include="ProgramTree\ParsNumeral.h" />
@@ -180,6 +185,7 @@
     <ClInclude Include="ProgramTree\Type.h" />
     <ClInclude Include="ProgramTree\Variable.h" />
     <ClInclude Include="Tokens\TokFunctions.h" />
+    <ClInclude Include="Tokens\TokPrint.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="scannerReadTest.recipe" />

@@ -13,7 +13,7 @@ Type::~Type()
 
 unsigned Type::getSize() // Get size in byte
 {
-	if (type == "Bool" || "Char")
+	if (type == "Bool" || type == "Char")
 		return 1;
 	else
 		return 4;

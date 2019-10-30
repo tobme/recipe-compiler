@@ -11,7 +11,8 @@
 #include "Tokens/Add.h"
 #include "Tokens/Numeral.h"
 #include "Tokens/TokFunctions.h"
-
+#include "Tokens/TokPrint.h"
+#include "Tokens/TokEndNote.h"
 
 
 Scanner::Scanner() : linesNumber{ 2 }, tokens{}
@@ -75,6 +76,14 @@ std::vector<Token*>& Scanner::read(std::string filename)
 			else if (text == "Add")
 			{
 				tokens.push_back(new Add(linesNumber));
+			}
+			else if (text == "Note")
+			{
+				tokens.push_back(new TokPrint(linesNumber));
+			}
+			else if (text == "end")
+			{
+				tokens.push_back(new TokEndNote(linesNumber));
 			}
 			else if (is_number(text))
 			{

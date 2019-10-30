@@ -7,6 +7,7 @@ class MyOperator :
 {
 public:
 	MyOperator(std::string n);
+	std::string getName();
 private:
 	std::string name;
 };

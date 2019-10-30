@@ -10,6 +10,7 @@ class Assignment :
 public:
 	Assignment(MyOperator* o, ParsExpression* e, Variable* v);
 	virtual ~Assignment();
+	std::ostream& codegen(std::ostream& os) override;
 private:
 	MyOperator* op;
 	ParsExpression* exp;

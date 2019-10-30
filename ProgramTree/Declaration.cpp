@@ -16,7 +16,7 @@ std::ofstream& Declaration::codegen(std::ofstream& os)
 {
 	int byteSize = type->getSize();
 
-	os << "\t" <<  name << "\t" << "RESB" << "\t" << byteSize << std::endl;
+	os << "\t" <<  name << "\t" << "resb" << "\t" << byteSize << std::endl;
 
 	return os;
 }
