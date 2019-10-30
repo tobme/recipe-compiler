@@ -65,14 +65,16 @@ Note that the milk can warm up very fast'
 To add two variables together you write. Add (giver Variable or constant) (Free word) (Recieving Variable)\
 For example
 ```sh
-Add 1 dl Milk'
+Add 1 dl Milk
 ```
 This is equal to
 ```sh
 Milk = Milk + 1;
 ```
 Subtract (Not added yet)
+
 Multiplication (Not added yet)
+
 Division (Not added yet)
 
 ### IfnGo
@@ -88,6 +90,7 @@ The program is ended with the "Enjoy"
 ### Prerequisites
 
 * Visual Studio [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/)
+
 Visual Studio is optional, but the project does not contain any Makefiles so if you dont use it you have to write them yourself.
 
 * GCC compiler [https://sourceforge.net/projects/mingw-w64/](https://sourceforge.net/projects/mingw-w64/)
