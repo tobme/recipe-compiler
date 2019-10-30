@@ -36,7 +36,7 @@ Chocolate Cake
 
 ### Variables
 
-The variable declaration is declared after the headline. All of the variables are global and is declared as "name" and then type. The following types exists:
+The variable declaration is declared after the headline. All of the variables are global and is declared as type and then name. The following types exists:
 - 1dl (A number)
 - 2dl (A character) Not implementated yet
 - 3dl (A string) Not implementated yet
