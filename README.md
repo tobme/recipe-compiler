@@ -19,13 +19,13 @@
 
 ## About the project
 
-A recipe compiler written in C++.\
+A recipe compiler written in C++.
 
 The compiler takes a .recipe file, a file written in a recipe programming language and compiles it into an assembly file.
 
 ## Language Syntax
 
-![An example of how a file can look written in the recipe programming language](recipe.png)
+![An example of how a file can look written in the recipe programming language](recipe2.png)
 
 ### Recipe Name
 
