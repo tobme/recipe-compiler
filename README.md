@@ -104,7 +104,7 @@ Note: The project only works on windows. Be sure to set the environment variable
 1. Clone the repository
 2. Open recipecomp.sln in Visual Studio
 3. Select the .recipe file in Visual Studio
-- Right click on the project -> Properties -> Debugging -> Commandline arguments
+   1. Right click on the project -> Properties -> Debugging -> Commandline arguments
 4. Run the project
 5. Type "nasm -f win32 outputFile.asm"
 6. Type "gcc -m32 outputFile.obj -o outputFile.exe"
